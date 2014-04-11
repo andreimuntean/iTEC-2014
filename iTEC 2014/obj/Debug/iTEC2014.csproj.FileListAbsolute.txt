@@ -1,0 +1,11 @@
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\bin\Debug\iTEC 2014.exe.config
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\bin\Debug\iTEC 2014.exe
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\bin\Debug\iTEC 2014.pdb
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.csprojResolveAssemblyReference.cache
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.MainForm.resources
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.Properties.Resources.resources
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.csproj.GenerateResource.Cache
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC 2014.exe
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC 2014.pdb
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.LoginForm.resources
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.ManagementForm.resources
