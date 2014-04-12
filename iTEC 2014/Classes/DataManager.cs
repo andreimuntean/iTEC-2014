@@ -17,5 +17,10 @@
 
             return ConnectionStatus.Success;
         }
+
+        public static void Logout()
+        {
+            CurrentUser = null;
+        }
     }
 }

@@ -41,7 +41,7 @@
             this.Body.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Body.Location = new System.Drawing.Point(0, 76);
             this.Body.Name = "Body";
-            this.Body.Size = new System.Drawing.Size(750, 485);
+            this.Body.Size = new System.Drawing.Size(800, 485);
             this.Body.TabIndex = 0;
             // 
             // Header
@@ -51,7 +51,7 @@
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(0, 0);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(750, 76);
+            this.Header.Size = new System.Drawing.Size(800, 76);
             this.Header.TabIndex = 2;
             // 
             // pictureBox1
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 561);
+            this.ClientSize = new System.Drawing.Size(800, 561);
             this.Controls.Add(this.Body);
             this.Controls.Add(this.Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

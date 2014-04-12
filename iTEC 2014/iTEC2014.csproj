@@ -47,41 +47,102 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Administrator\CategoryEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\CategoryEditForm.Designer.cs">
+      <DependentUpon>CategoryEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\DataManager.cs" />
     <Compile Include="Classes\Encryption.cs" />
+    <Compile Include="Classes\ViewManager.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Forms\Administrator\GroupEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\GroupEditForm.Designer.cs">
+      <DependentUpon>GroupEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IView.cs" />
     <Compile Include="Classes\MenuItem.cs" />
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Forms\Login\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Forms\Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagementForm.cs">
+    <Compile Include="Forms\Administrator\AdministratorManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagementForm.Designer.cs">
-      <DependentUpon>ManagementForm.cs</DependentUpon>
+    <Compile Include="Forms\Administrator\AdministratorManagementForm.Designer.cs">
+      <DependentUpon>AdministratorManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrator\ItemEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\ItemEditForm.Designer.cs">
+      <DependentUpon>ItemEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Administrator\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Strings.cs" />
     <Compile Include="Resources\Theme.cs" />
-    <EmbeddedResource Include="LoginForm.resx">
+    <Compile Include="Forms\User\UserBrowseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\UserBrowseForm.Designer.cs">
+      <DependentUpon>UserBrowseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrator\UserEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\UserEditForm.Designer.cs">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\UserSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\UserSettingsForm.Designer.cs">
+      <DependentUpon>UserSettingsForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Administrator\CategoryEditForm.resx">
+      <DependentUpon>CategoryEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator\GroupEditForm.resx">
+      <DependentUpon>GroupEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator\ItemEditForm.resx">
+      <DependentUpon>ItemEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator\UserEditForm.resx">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagementForm.resx">
-      <DependentUpon>ManagementForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Administrator\AdministratorManagementForm.resx">
+      <DependentUpon>AdministratorManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\UserBrowseForm.resx">
+      <DependentUpon>UserBrowseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,6 +154,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Forms\User\UserSettingsForm.resx">
+      <DependentUpon>UserSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -112,6 +176,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\LoginIcon.png" />
+    <None Include="Assets\ManagementIcon.png" />
+    <Content Include="Assets\WelcomeIcon.png" />
     <Content Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

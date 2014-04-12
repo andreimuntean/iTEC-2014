@@ -12,7 +12,7 @@ namespace iTEC2014
             InitializeComponent();
             MenuItems = new List<MenuItem>()
             {
-                new MenuItem(Strings.MenuHelp, 3)
+                new MenuItem(Strings.MenuHelp, 4, () => {})
             };
 
             Initialize();
@@ -56,7 +56,6 @@ namespace iTEC2014
             usernameLabel.Text = Strings.Username;
             passwordLabel.Text = Strings.Password;
             userButton.Text = Strings.LoginUserButton;
-            administratorButton.Text = Strings.LoginAdministratorButton;
 
             loginLabel.ForeColor = Theme.Color4;
             descriptionLabel.ForeColor = Theme.Color7;
@@ -64,8 +63,6 @@ namespace iTEC2014
             passwordLabel.ForeColor = Theme.Color3;
             userButton.BackColor = Theme.Color4;
             userButton.ForeColor = Theme.Color1;
-            administratorButton.BackColor = Theme.Color4;
-            administratorButton.ForeColor = Theme.Color1;
         }
 
         public new void Dispose()
@@ -82,22 +79,12 @@ namespace iTEC2014
                 var password = passwordTextBox.Text;
 
                 var connectionStatus = DataManager.Login(username, password);
-                Program.Screen.SetView(new ManagementForm());
+                ViewManager.View = View.UserBrowse;
 
                 switch (connectionStatus)
                 {
                     case ConnectionStatus.Success:
-                        if (sender == administratorButton)
-                        {
-                            if (DataManager.CurrentUser.IsAdministrator)
-                            {
-                                Program.Screen.SetView(new ManagementForm());
-                            }
-                            else
-                            {
-                                MessageBox.Show(Strings.NotAdministratorError, Strings.Title, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            }
-                        }
+                        ViewManager.View = View.UserBrowse;
                         break;
                     
                     case ConnectionStatus.TimedOut:
