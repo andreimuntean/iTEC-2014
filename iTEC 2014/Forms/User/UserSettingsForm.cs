@@ -37,7 +37,7 @@ namespace iTEC2014
             saveButton.Text = Strings.ConfirmChangesButton;
             welcomeMessageTextBox.Text = DataManager.CurrentUser.WelcomeMessage;
             passwordLabel.Text = Strings.SettingsChangePassword;
-            passwordLabel.Text = Strings.SettingsConfirmPassword;
+            passwordConfirmLabel.Text = Strings.SettingsConfirmPassword;
 
             // Panel formatting.
             statusPanel.BackColor = Theme.Color7;
