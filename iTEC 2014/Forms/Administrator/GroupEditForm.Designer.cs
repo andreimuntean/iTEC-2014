@@ -34,11 +34,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bodyPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.pointsTextBox = new System.Windows.Forms.TextBox();
+            this.pointsLabel = new System.Windows.Forms.Label();
+            this.groupDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.groupDescriptionLabel = new System.Windows.Forms.Label();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.idTextBox = new System.Windows.Forms.TextBox();
             this.idLabel = new System.Windows.Forms.Label();
-            this.cancelButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.statusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,7 +96,6 @@
             // 
             this.bodyPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(89)))), ((int)(((byte)(101)))));
             this.bodyPanel.Controls.Add(this.panel1);
-            this.bodyPanel.Controls.Add(this.cancelButton);
             this.bodyPanel.Controls.Add(this.saveButton);
             this.bodyPanel.Location = new System.Drawing.Point(50, 101);
             this.bodyPanel.Name = "bodyPanel";
@@ -103,44 +105,84 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.usernameTextBox);
+            this.panel1.Controls.Add(this.pointsTextBox);
+            this.panel1.Controls.Add(this.pointsLabel);
+            this.panel1.Controls.Add(this.groupDescriptionTextBox);
+            this.panel1.Controls.Add(this.groupDescriptionLabel);
+            this.panel1.Controls.Add(this.nameTextBox);
+            this.panel1.Controls.Add(this.nameLabel);
+            this.panel1.Controls.Add(this.idTextBox);
             this.panel1.Controls.Add(this.idLabel);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(694, 296);
             this.panel1.TabIndex = 14;
             // 
-            // textBox1
+            // pointsTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(87, 120);
-            this.textBox1.MaxLength = 9;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(520, 25);
-            this.textBox1.TabIndex = 7;
+            this.pointsTextBox.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pointsTextBox.Location = new System.Drawing.Point(87, 260);
+            this.pointsTextBox.MaxLength = 32;
+            this.pointsTextBox.Name = "pointsTextBox";
+            this.pointsTextBox.Size = new System.Drawing.Size(520, 29);
+            this.pointsTextBox.TabIndex = 3;
             // 
-            // label1
+            // pointsLabel
             // 
-            this.label1.Font = new System.Drawing.Font("Calibri", 13F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(87, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(520, 22);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Unique Identifier";
+            this.pointsLabel.Font = new System.Drawing.Font("Calibri", 13F);
+            this.pointsLabel.ForeColor = System.Drawing.Color.White;
+            this.pointsLabel.Location = new System.Drawing.Point(87, 230);
+            this.pointsLabel.Name = "pointsLabel";
+            this.pointsLabel.Size = new System.Drawing.Size(520, 22);
+            this.pointsLabel.TabIndex = 18;
+            this.pointsLabel.Text = "Points";
             // 
-            // usernameTextBox
+            // groupDescriptionTextBox
             // 
-            this.usernameTextBox.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(87, 50);
-            this.usernameTextBox.MaxLength = 9;
-            this.usernameTextBox.Multiline = true;
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(520, 25);
-            this.usernameTextBox.TabIndex = 5;
+            this.groupDescriptionTextBox.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupDescriptionTextBox.Location = new System.Drawing.Point(87, 190);
+            this.groupDescriptionTextBox.MaxLength = 32;
+            this.groupDescriptionTextBox.Name = "groupDescriptionTextBox";
+            this.groupDescriptionTextBox.Size = new System.Drawing.Size(520, 29);
+            this.groupDescriptionTextBox.TabIndex = 2;
+            // 
+            // groupDescriptionLabel
+            // 
+            this.groupDescriptionLabel.Font = new System.Drawing.Font("Calibri", 13F);
+            this.groupDescriptionLabel.ForeColor = System.Drawing.Color.White;
+            this.groupDescriptionLabel.Location = new System.Drawing.Point(87, 163);
+            this.groupDescriptionLabel.Name = "groupDescriptionLabel";
+            this.groupDescriptionLabel.Size = new System.Drawing.Size(520, 22);
+            this.groupDescriptionLabel.TabIndex = 16;
+            this.groupDescriptionLabel.Text = "Description";
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTextBox.Location = new System.Drawing.Point(87, 120);
+            this.nameTextBox.MaxLength = 32;
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(520, 29);
+            this.nameTextBox.TabIndex = 1;
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.Font = new System.Drawing.Font("Calibri", 13F);
+            this.nameLabel.ForeColor = System.Drawing.Color.White;
+            this.nameLabel.Location = new System.Drawing.Point(87, 93);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(520, 22);
+            this.nameLabel.TabIndex = 14;
+            this.nameLabel.Text = "Name";
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idTextBox.Location = new System.Drawing.Point(87, 50);
+            this.idTextBox.MaxLength = 9;
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(520, 29);
+            this.idTextBox.TabIndex = 0;
             // 
             // idLabel
             // 
@@ -149,22 +191,8 @@
             this.idLabel.Location = new System.Drawing.Point(87, 23);
             this.idLabel.Name = "idLabel";
             this.idLabel.Size = new System.Drawing.Size(520, 22);
-            this.idLabel.TabIndex = 4;
+            this.idLabel.TabIndex = 12;
             this.idLabel.Text = "Unique Identifier";
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(134)))), ((int)(((byte)(44)))));
-            this.cancelButton.FlatAppearance.BorderSize = 0;
-            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelButton.Font = new System.Drawing.Font("Calibri", 13F);
-            this.cancelButton.ForeColor = System.Drawing.Color.White;
-            this.cancelButton.Location = new System.Drawing.Point(90, 310);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(180, 50);
-            this.cancelButton.TabIndex = 13;
-            this.cancelButton.Text = "Discard Changes";
-            this.cancelButton.UseVisualStyleBackColor = false;
             // 
             // saveButton
             // 
@@ -173,12 +201,13 @@
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Calibri", 13F);
             this.saveButton.ForeColor = System.Drawing.Color.White;
-            this.saveButton.Location = new System.Drawing.Point(430, 310);
+            this.saveButton.Location = new System.Drawing.Point(260, 310);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(180, 50);
-            this.saveButton.TabIndex = 12;
+            this.saveButton.TabIndex = 4;
             this.saveButton.Text = "Save Changes";
             this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // GroupEditForm
             // 
@@ -207,11 +236,14 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel bodyPanel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.Label idLabel;
-        private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Label groupDescriptionLabel;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.Label idLabel;
+        private System.Windows.Forms.TextBox pointsTextBox;
+        private System.Windows.Forms.Label pointsLabel;
+        private System.Windows.Forms.TextBox groupDescriptionTextBox;
     }
 }

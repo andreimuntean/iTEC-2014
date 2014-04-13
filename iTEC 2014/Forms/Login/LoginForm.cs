@@ -12,7 +12,7 @@ namespace iTEC2014
             InitializeComponent();
             MenuItems = new List<MenuItem>()
             {
-                new MenuItem(Strings.MenuHelp, 4, () => {})
+                new MenuItem(Strings.MenuHelp, 4, () => FileManager.OpenHelp())
             };
 
             Initialize();
@@ -29,12 +29,12 @@ namespace iTEC2014
 
                 if (username.Length == 0)
                 {
-                    MessageBox.Show(Strings.AuthenticationFailed, Strings.Title, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    NotificationManager.LogException(Strings.AuthenticationFailed);
                     return false;
                 }
                 else if (password.Length == 0)
                 {
-                    MessageBox.Show(Strings.AuthenticationFailed, Strings.Title, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    NotificationManager.LogException(Strings.AuthenticationFailed);
                     return false;
                 }
 
@@ -42,7 +42,7 @@ namespace iTEC2014
             }
             catch
             {
-                MessageBox.Show(Strings.AuthenticationFailed, Strings.Title, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                NotificationManager.LogException(Strings.AuthenticationFailed);
                 return false;
             }
         }
@@ -55,14 +55,14 @@ namespace iTEC2014
             descriptionLabel.Text = Strings.LoginDescription;
             usernameLabel.Text = Strings.Username;
             passwordLabel.Text = Strings.Password;
-            userButton.Text = Strings.LoginUserButton;
+            loginButton.Text = Strings.LoginUserButton;
 
             loginLabel.ForeColor = Theme.Color4;
             descriptionLabel.ForeColor = Theme.Color7;
             usernameLabel.ForeColor = Theme.Color3;
             passwordLabel.ForeColor = Theme.Color3;
-            userButton.BackColor = Theme.Color4;
-            userButton.ForeColor = Theme.Color1;
+            loginButton.BackColor = Theme.Color4;
+            loginButton.ForeColor = Theme.Color1;
         }
 
         public new void Dispose()
@@ -76,23 +76,22 @@ namespace iTEC2014
             if (IsInputValid())
             {
                 var username = usernameTextBox.Text;
-                var password = passwordTextBox.Text;
+                var password = EncryptionManager.Encrypt(passwordTextBox.Text);
 
                 var connectionStatus = DataManager.Login(username, password);
-                ViewManager.View = View.UserBrowse;
 
                 switch (connectionStatus)
                 {
                     case ConnectionStatus.Success:
                         ViewManager.View = View.UserBrowse;
                         break;
-                    
+
                     case ConnectionStatus.TimedOut:
-                        MessageBox.Show(Strings.ConnectionTimedOut, Strings.Title, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        NotificationManager.LogException(Strings.ConnectionTimedOut);
                         break;
                     
                     case ConnectionStatus.InvalidInput:
-                        MessageBox.Show(Strings.AuthenticationFailed, Strings.Title, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        NotificationManager.LogException(Strings.AuthenticationFailed);
                         break;
                 }
             }

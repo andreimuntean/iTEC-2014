@@ -10,5 +10,7 @@ namespace iTEC2014
         public static Color Color5 { get { return Color.FromArgb(245, 184, 5); } }
         public static Color Color6 { get { return Color.FromArgb(204, 204, 204); } }
         public static Color Color7 { get { return Color.FromArgb(77, 89, 101); } }
+        public static Color Color8 { get { return Color.FromArgb(67, 79, 91); } }
+        public static Color Color9 { get { return Color.FromArgb(57, 69, 81); } }
     }
 }

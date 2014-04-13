@@ -33,11 +33,14 @@
             this.statusPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.saveButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.welcomeMessageLabel = new System.Windows.Forms.Label();
             this.welcomeMessageTextBox = new System.Windows.Forms.TextBox();
+            this.welcomeMessageLabel = new System.Windows.Forms.Label();
             this.bodyPanel = new System.Windows.Forms.Panel();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.passwordConfirmTextBox = new System.Windows.Forms.TextBox();
+            this.passwordConfirmLabel = new System.Windows.Forms.Label();
             this.statusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -94,36 +97,36 @@
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Calibri", 13F);
             this.saveButton.ForeColor = System.Drawing.Color.White;
-            this.saveButton.Location = new System.Drawing.Point(430, 310);
+            this.saveButton.Location = new System.Drawing.Point(260, 310);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(180, 50);
             this.saveButton.TabIndex = 12;
             this.saveButton.Text = "Save Changes";
             this.saveButton.UseVisualStyleBackColor = false;
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(134)))), ((int)(((byte)(44)))));
-            this.cancelButton.FlatAppearance.BorderSize = 0;
-            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelButton.Font = new System.Drawing.Font("Calibri", 13F);
-            this.cancelButton.ForeColor = System.Drawing.Color.White;
-            this.cancelButton.Location = new System.Drawing.Point(90, 310);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(180, 50);
-            this.cancelButton.TabIndex = 13;
-            this.cancelButton.Text = "Discard Changes";
-            this.cancelButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // panel2
             // 
             this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.passwordConfirmTextBox);
+            this.panel2.Controls.Add(this.passwordConfirmLabel);
+            this.panel2.Controls.Add(this.passwordTextBox);
+            this.panel2.Controls.Add(this.passwordLabel);
             this.panel2.Controls.Add(this.welcomeMessageTextBox);
             this.panel2.Controls.Add(this.welcomeMessageLabel);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(694, 296);
             this.panel2.TabIndex = 14;
+            // 
+            // welcomeMessageTextBox
+            // 
+            this.welcomeMessageTextBox.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeMessageTextBox.Location = new System.Drawing.Point(87, 50);
+            this.welcomeMessageTextBox.MaxLength = 32;
+            this.welcomeMessageTextBox.Name = "welcomeMessageTextBox";
+            this.welcomeMessageTextBox.Size = new System.Drawing.Size(520, 29);
+            this.welcomeMessageTextBox.TabIndex = 5;
             // 
             // welcomeMessageLabel
             // 
@@ -135,26 +138,55 @@
             this.welcomeMessageLabel.TabIndex = 4;
             this.welcomeMessageLabel.Text = "Welcome Message";
             // 
-            // welcomeMessageTextBox
-            // 
-            this.welcomeMessageTextBox.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeMessageTextBox.Location = new System.Drawing.Point(87, 50);
-            this.welcomeMessageTextBox.MaxLength = 64;
-            this.welcomeMessageTextBox.Multiline = true;
-            this.welcomeMessageTextBox.Name = "welcomeMessageTextBox";
-            this.welcomeMessageTextBox.Size = new System.Drawing.Size(520, 48);
-            this.welcomeMessageTextBox.TabIndex = 5;
-            // 
             // bodyPanel
             // 
             this.bodyPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(89)))), ((int)(((byte)(101)))));
             this.bodyPanel.Controls.Add(this.panel2);
-            this.bodyPanel.Controls.Add(this.cancelButton);
             this.bodyPanel.Controls.Add(this.saveButton);
             this.bodyPanel.Location = new System.Drawing.Point(50, 101);
             this.bodyPanel.Name = "bodyPanel";
             this.bodyPanel.Size = new System.Drawing.Size(700, 372);
             this.bodyPanel.TabIndex = 44;
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTextBox.Location = new System.Drawing.Point(87, 120);
+            this.passwordTextBox.MaxLength = 32;
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '•';
+            this.passwordTextBox.Size = new System.Drawing.Size(520, 29);
+            this.passwordTextBox.TabIndex = 7;
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.Font = new System.Drawing.Font("Calibri", 13F);
+            this.passwordLabel.ForeColor = System.Drawing.Color.White;
+            this.passwordLabel.Location = new System.Drawing.Point(87, 93);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(520, 22);
+            this.passwordLabel.TabIndex = 6;
+            this.passwordLabel.Text = "Message";
+            // 
+            // passwordConfirmTextBox
+            // 
+            this.passwordConfirmTextBox.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordConfirmTextBox.Location = new System.Drawing.Point(87, 190);
+            this.passwordConfirmTextBox.MaxLength = 32;
+            this.passwordConfirmTextBox.Name = "passwordConfirmTextBox";
+            this.passwordConfirmTextBox.PasswordChar = '•';
+            this.passwordConfirmTextBox.Size = new System.Drawing.Size(520, 29);
+            this.passwordConfirmTextBox.TabIndex = 9;
+            // 
+            // passwordConfirmLabel
+            // 
+            this.passwordConfirmLabel.Font = new System.Drawing.Font("Calibri", 13F);
+            this.passwordConfirmLabel.ForeColor = System.Drawing.Color.White;
+            this.passwordConfirmLabel.Location = new System.Drawing.Point(87, 163);
+            this.passwordConfirmLabel.Name = "passwordConfirmLabel";
+            this.passwordConfirmLabel.Size = new System.Drawing.Size(520, 22);
+            this.passwordConfirmLabel.TabIndex = 8;
+            this.passwordConfirmLabel.Text = "Message";
             // 
             // UserSettingsForm
             // 
@@ -182,10 +214,13 @@
         private System.Windows.Forms.Panel statusPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox welcomeMessageTextBox;
         private System.Windows.Forms.Label welcomeMessageLabel;
         private System.Windows.Forms.Panel bodyPanel;
+        private System.Windows.Forms.TextBox passwordConfirmTextBox;
+        private System.Windows.Forms.Label passwordConfirmLabel;
+        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.Label passwordLabel;
     }
 }

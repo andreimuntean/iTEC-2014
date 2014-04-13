@@ -47,15 +47,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\AdminUserButton.cs" />
+    <Compile Include="Classes\GroupButton.cs" />
+    <Compile Include="Classes\CategoryButton.cs" />
+    <Compile Include="Classes\Item.cs" />
+    <Compile Include="Classes\AdminItemButton.cs" />
+    <Compile Include="Classes\ItemButton.cs" />
+    <Compile Include="Classes\ItemCategory.cs" />
+    <Compile Include="Classes\UserGroup.cs" />
     <Compile Include="Forms\Administrator\CategoryEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Administrator\CategoryEditForm.Designer.cs">
       <DependentUpon>CategoryEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\DataManager.cs" />
-    <Compile Include="Classes\Encryption.cs" />
-    <Compile Include="Classes\ViewManager.cs" />
+    <Compile Include="Interfaces\IData.cs" />
+    <Compile Include="Managers\BudgetManager.cs" />
+    <Compile Include="Managers\CurrencyManager.cs" />
+    <Compile Include="Managers\DataManager.cs" />
+    <Compile Include="Managers\Encryption.cs" />
+    <Compile Include="Managers\FileManager.cs" />
+    <Compile Include="Managers\NotificationManager.cs" />
+    <Compile Include="Managers\ViewManager.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Forms\Administrator\GroupEditForm.cs">
       <SubType>Form</SubType>
@@ -77,11 +90,11 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Administrator\AdministratorManagementForm.cs">
+    <Compile Include="Forms\Administrator\ManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Administrator\AdministratorManagementForm.Designer.cs">
-      <DependentUpon>AdministratorManagementForm.cs</DependentUpon>
+    <Compile Include="Forms\Administrator\ManagementForm.Designer.cs">
+      <DependentUpon>ManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Administrator\ItemEditForm.cs">
       <SubType>Form</SubType>
@@ -138,8 +151,8 @@
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Administrator\AdministratorManagementForm.resx">
-      <DependentUpon>AdministratorManagementForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Administrator\ManagementForm.resx">
+      <DependentUpon>ManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\User\UserBrowseForm.resx">
       <DependentUpon>UserBrowseForm.cs</DependentUpon>
@@ -170,13 +183,42 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Assets\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\LoginIcon.png" />
     <None Include="Assets\ManagementIcon.png" />
+    <None Include="Assets\ReportIcon.png" />
     <Content Include="Assets\WelcomeIcon.png" />
     <Content Include="icon.ico" />
   </ItemGroup>

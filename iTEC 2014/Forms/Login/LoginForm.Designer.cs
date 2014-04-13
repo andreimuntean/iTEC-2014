@@ -32,7 +32,7 @@
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.passwordLabel = new System.Windows.Forms.Label();
-            this.userButton = new System.Windows.Forms.Button();
+            this.loginButton = new System.Windows.Forms.Button();
             this.loginPictureBox = new System.Windows.Forms.PictureBox();
             this.descriptionLabel = new System.Windows.Forms.Label();
             this.loginLabel = new System.Windows.Forms.Label();
@@ -54,9 +54,8 @@
             this.usernameTextBox.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameTextBox.Location = new System.Drawing.Point(197, 199);
             this.usernameTextBox.MaxLength = 26;
-            this.usernameTextBox.Multiline = true;
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(410, 25);
+            this.usernameTextBox.Size = new System.Drawing.Size(410, 29);
             this.usernameTextBox.TabIndex = 3;
             // 
             // passwordTextBox
@@ -64,10 +63,9 @@
             this.passwordTextBox.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTextBox.Location = new System.Drawing.Point(197, 266);
             this.passwordTextBox.MaxLength = 32;
-            this.passwordTextBox.Multiline = true;
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '•';
-            this.passwordTextBox.Size = new System.Drawing.Size(410, 25);
+            this.passwordTextBox.Size = new System.Drawing.Size(410, 29);
             this.passwordTextBox.TabIndex = 5;
             // 
             // passwordLabel
@@ -80,20 +78,20 @@
             this.passwordLabel.TabIndex = 4;
             this.passwordLabel.Text = "Password";
             // 
-            // userButton
+            // loginButton
             // 
-            this.userButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(134)))), ((int)(((byte)(44)))));
-            this.userButton.FlatAppearance.BorderSize = 0;
-            this.userButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.userButton.Font = new System.Drawing.Font("Calibri", 13F);
-            this.userButton.ForeColor = System.Drawing.Color.White;
-            this.userButton.Location = new System.Drawing.Point(314, 319);
-            this.userButton.Name = "userButton";
-            this.userButton.Size = new System.Drawing.Size(180, 50);
-            this.userButton.TabIndex = 7;
-            this.userButton.Text = "Login";
-            this.userButton.UseVisualStyleBackColor = false;
-            this.userButton.Click += new System.EventHandler(this.loginButton_Click);
+            this.loginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(134)))), ((int)(((byte)(44)))));
+            this.loginButton.FlatAppearance.BorderSize = 0;
+            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginButton.Font = new System.Drawing.Font("Calibri", 13F);
+            this.loginButton.ForeColor = System.Drawing.Color.White;
+            this.loginButton.Location = new System.Drawing.Point(314, 319);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(180, 50);
+            this.loginButton.TabIndex = 7;
+            this.loginButton.Text = "Login";
+            this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // loginPictureBox
             // 
@@ -129,6 +127,7 @@
             // 
             // LoginForm
             // 
+            this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -136,7 +135,7 @@
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.loginPictureBox);
-            this.Controls.Add(this.userButton);
+            this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameTextBox);
@@ -156,7 +155,7 @@
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label passwordLabel;
-        private System.Windows.Forms.Button userButton;
+        private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.PictureBox loginPictureBox;
         private System.Windows.Forms.Label descriptionLabel;
         private System.Windows.Forms.Label loginLabel;

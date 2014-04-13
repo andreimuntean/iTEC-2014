@@ -31,9 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.Body = new System.Windows.Forms.Panel();
             this.Header = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.logoPictureBox = new System.Windows.Forms.PictureBox();
+            this.MenuPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.Header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Body
@@ -47,21 +50,39 @@
             // Header
             // 
             this.Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(89)))), ((int)(((byte)(101)))));
-            this.Header.Controls.Add(this.pictureBox1);
+            this.Header.Controls.Add(this.MenuPanel);
+            this.Header.Controls.Add(this.panel2);
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(0, 0);
             this.Header.Name = "Header";
             this.Header.Size = new System.Drawing.Size(800, 76);
             this.Header.TabIndex = 2;
             // 
-            // pictureBox1
+            // logoPictureBox
             // 
-            this.pictureBox1.Image = global::iTEC2014.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 52);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.logoPictureBox.Image = global::iTEC2014.Properties.Resources.logo;
+            this.logoPictureBox.Location = new System.Drawing.Point(12, 12);
+            this.logoPictureBox.Name = "logoPictureBox";
+            this.logoPictureBox.Size = new System.Drawing.Size(265, 52);
+            this.logoPictureBox.TabIndex = 0;
+            this.logoPictureBox.TabStop = false;
+            // 
+            // MenuPanel
+            // 
+            this.MenuPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MenuPanel.Location = new System.Drawing.Point(300, 0);
+            this.MenuPanel.Name = "MenuPanel";
+            this.MenuPanel.Size = new System.Drawing.Size(500, 76);
+            this.MenuPanel.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.logoPictureBox);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(300, 76);
+            this.panel2.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -76,7 +97,8 @@
             this.Name = "MainForm";
             this.Text = "Employee Delight Optimization";
             this.Header.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -85,7 +107,9 @@
 
         private System.Windows.Forms.Panel Body;
         private System.Windows.Forms.Panel Header;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox logoPictureBox;
+        private System.Windows.Forms.Panel MenuPanel;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

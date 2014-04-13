@@ -1,6 +1,6 @@
 ﻿namespace iTEC2014
 {
-    partial class AdministratorManagementForm
+    partial class ManagementForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,29 +31,29 @@
             this.itemLabel = new System.Windows.Forms.Label();
             this.browsePanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.itemPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.addDataButton = new System.Windows.Forms.Button();
             this.itemHeaderPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.categoryPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.addSetButton = new System.Windows.Forms.Button();
             this.categoryHeaderPanel = new System.Windows.Forms.Panel();
             this.categoryLabel = new System.Windows.Forms.Label();
-            this.addCategoryButton = new System.Windows.Forms.Button();
-            this.itemPanel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.addItemButton = new System.Windows.Forms.Button();
             this.statusPanel = new System.Windows.Forms.Panel();
-            this.managementLabel = new System.Windows.Forms.Label();
-            this.descriptionLabel = new System.Windows.Forms.Label();
-            this.viewUsersButton = new System.Windows.Forms.Button();
             this.viewItemsButton = new System.Windows.Forms.Button();
+            this.viewUsersButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.descriptionLabel = new System.Windows.Forms.Label();
+            this.managementLabel = new System.Windows.Forms.Label();
             this.browsePanel.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.itemHeaderPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.categoryHeaderPanel.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.statusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +90,39 @@
             this.panel4.Size = new System.Drawing.Size(480, 372);
             this.panel4.TabIndex = 1;
             // 
+            // itemPanel
+            // 
+            this.itemPanel.AutoScroll = true;
+            this.itemPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemPanel.Location = new System.Drawing.Point(0, 50);
+            this.itemPanel.Name = "itemPanel";
+            this.itemPanel.Size = new System.Drawing.Size(480, 262);
+            this.itemPanel.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.addDataButton);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 312);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(480, 60);
+            this.panel2.TabIndex = 3;
+            // 
+            // addDataButton
+            // 
+            this.addDataButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(134)))), ((int)(((byte)(44)))));
+            this.addDataButton.FlatAppearance.BorderSize = 0;
+            this.addDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addDataButton.Font = new System.Drawing.Font("Calibri", 13F);
+            this.addDataButton.ForeColor = System.Drawing.Color.White;
+            this.addDataButton.Location = new System.Drawing.Point(288, 10);
+            this.addDataButton.Name = "addDataButton";
+            this.addDataButton.Size = new System.Drawing.Size(180, 40);
+            this.addDataButton.TabIndex = 8;
+            this.addDataButton.Text = "Add Item";
+            this.addDataButton.UseVisualStyleBackColor = false;
+            this.addDataButton.Click += new System.EventHandler(this.addDataButtonClick);
+            // 
             // itemHeaderPanel
             // 
             this.itemHeaderPanel.Controls.Add(this.itemLabel);
@@ -121,12 +154,27 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.addCategoryButton);
+            this.panel1.Controls.Add(this.addSetButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 312);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 60);
             this.panel1.TabIndex = 2;
+            // 
+            // addSetButton
+            // 
+            this.addSetButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(134)))), ((int)(((byte)(44)))));
+            this.addSetButton.FlatAppearance.BorderSize = 0;
+            this.addSetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addSetButton.Font = new System.Drawing.Font("Calibri", 13F);
+            this.addSetButton.ForeColor = System.Drawing.Color.White;
+            this.addSetButton.Location = new System.Drawing.Point(20, 10);
+            this.addSetButton.Name = "addSetButton";
+            this.addSetButton.Size = new System.Drawing.Size(180, 40);
+            this.addSetButton.TabIndex = 8;
+            this.addSetButton.Text = "Create Category";
+            this.addSetButton.UseVisualStyleBackColor = false;
+            this.addSetButton.Click += new System.EventHandler(this.addSetButtonClick);
             // 
             // categoryHeaderPanel
             // 
@@ -148,52 +196,6 @@
             this.categoryLabel.Text = "CATEGORY";
             this.categoryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // addCategoryButton
-            // 
-            this.addCategoryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(134)))), ((int)(((byte)(44)))));
-            this.addCategoryButton.FlatAppearance.BorderSize = 0;
-            this.addCategoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addCategoryButton.Font = new System.Drawing.Font("Calibri", 13F);
-            this.addCategoryButton.ForeColor = System.Drawing.Color.White;
-            this.addCategoryButton.Location = new System.Drawing.Point(20, 10);
-            this.addCategoryButton.Name = "addCategoryButton";
-            this.addCategoryButton.Size = new System.Drawing.Size(180, 40);
-            this.addCategoryButton.TabIndex = 8;
-            this.addCategoryButton.Text = "Create Category";
-            this.addCategoryButton.UseVisualStyleBackColor = false;
-            // 
-            // itemPanel
-            // 
-            this.itemPanel.AutoScroll = true;
-            this.itemPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.itemPanel.Location = new System.Drawing.Point(0, 50);
-            this.itemPanel.Name = "itemPanel";
-            this.itemPanel.Size = new System.Drawing.Size(480, 262);
-            this.itemPanel.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.addItemButton);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 312);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(480, 60);
-            this.panel2.TabIndex = 3;
-            // 
-            // addItemButton
-            // 
-            this.addItemButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(134)))), ((int)(((byte)(44)))));
-            this.addItemButton.FlatAppearance.BorderSize = 0;
-            this.addItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addItemButton.Font = new System.Drawing.Font("Calibri", 13F);
-            this.addItemButton.ForeColor = System.Drawing.Color.White;
-            this.addItemButton.Location = new System.Drawing.Point(288, 10);
-            this.addItemButton.Name = "addItemButton";
-            this.addItemButton.Size = new System.Drawing.Size(180, 40);
-            this.addItemButton.TabIndex = 8;
-            this.addItemButton.Text = "Add Item";
-            this.addItemButton.UseVisualStyleBackColor = false;
-            // 
             // statusPanel
             // 
             this.statusPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(89)))), ((int)(((byte)(101)))));
@@ -206,42 +208,6 @@
             this.statusPanel.Name = "statusPanel";
             this.statusPanel.Size = new System.Drawing.Size(700, 83);
             this.statusPanel.TabIndex = 36;
-            // 
-            // managementLabel
-            // 
-            this.managementLabel.Font = new System.Drawing.Font("Calibri", 20F);
-            this.managementLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(134)))), ((int)(((byte)(44)))));
-            this.managementLabel.Location = new System.Drawing.Point(79, 8);
-            this.managementLabel.Name = "managementLabel";
-            this.managementLabel.Size = new System.Drawing.Size(350, 33);
-            this.managementLabel.TabIndex = 30;
-            this.managementLabel.Text = "MANAGEMENT";
-            this.managementLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // descriptionLabel
-            // 
-            this.descriptionLabel.Font = new System.Drawing.Font("Calibri", 13F);
-            this.descriptionLabel.ForeColor = System.Drawing.Color.White;
-            this.descriptionLabel.Location = new System.Drawing.Point(81, 49);
-            this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(350, 22);
-            this.descriptionLabel.TabIndex = 31;
-            this.descriptionLabel.Text = "Add or edit users and items.";
-            this.descriptionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // viewUsersButton
-            // 
-            this.viewUsersButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(134)))), ((int)(((byte)(44)))));
-            this.viewUsersButton.FlatAppearance.BorderSize = 0;
-            this.viewUsersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewUsersButton.Font = new System.Drawing.Font("Calibri", 13F);
-            this.viewUsersButton.ForeColor = System.Drawing.Color.White;
-            this.viewUsersButton.Location = new System.Drawing.Point(508, 7);
-            this.viewUsersButton.Name = "viewUsersButton";
-            this.viewUsersButton.Size = new System.Drawing.Size(180, 31);
-            this.viewUsersButton.TabIndex = 32;
-            this.viewUsersButton.Text = "View Users";
-            this.viewUsersButton.UseVisualStyleBackColor = false;
             // 
             // viewItemsButton
             // 
@@ -256,6 +222,22 @@
             this.viewItemsButton.TabIndex = 33;
             this.viewItemsButton.Text = "View Items";
             this.viewItemsButton.UseVisualStyleBackColor = false;
+            this.viewItemsButton.Click += new System.EventHandler(this.viewItemsButton_Click);
+            // 
+            // viewUsersButton
+            // 
+            this.viewUsersButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(134)))), ((int)(((byte)(44)))));
+            this.viewUsersButton.FlatAppearance.BorderSize = 0;
+            this.viewUsersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewUsersButton.Font = new System.Drawing.Font("Calibri", 13F);
+            this.viewUsersButton.ForeColor = System.Drawing.Color.White;
+            this.viewUsersButton.Location = new System.Drawing.Point(508, 7);
+            this.viewUsersButton.Name = "viewUsersButton";
+            this.viewUsersButton.Size = new System.Drawing.Size(180, 31);
+            this.viewUsersButton.TabIndex = 32;
+            this.viewUsersButton.Text = "View Users";
+            this.viewUsersButton.UseVisualStyleBackColor = false;
+            this.viewUsersButton.Click += new System.EventHandler(this.viewUsersButton_Click);
             // 
             // pictureBox1
             // 
@@ -267,7 +249,29 @@
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
-            // AdministratorManagementForm
+            // descriptionLabel
+            // 
+            this.descriptionLabel.Font = new System.Drawing.Font("Calibri", 13F);
+            this.descriptionLabel.ForeColor = System.Drawing.Color.White;
+            this.descriptionLabel.Location = new System.Drawing.Point(81, 49);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Size = new System.Drawing.Size(350, 22);
+            this.descriptionLabel.TabIndex = 31;
+            this.descriptionLabel.Text = "Add or edit users and items.";
+            this.descriptionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // managementLabel
+            // 
+            this.managementLabel.Font = new System.Drawing.Font("Calibri", 20F);
+            this.managementLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(134)))), ((int)(((byte)(44)))));
+            this.managementLabel.Location = new System.Drawing.Point(79, 8);
+            this.managementLabel.Name = "managementLabel";
+            this.managementLabel.Size = new System.Drawing.Size(350, 33);
+            this.managementLabel.TabIndex = 30;
+            this.managementLabel.Text = "MANAGEMENT";
+            this.managementLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -275,15 +279,15 @@
             this.Controls.Add(this.statusPanel);
             this.Controls.Add(this.browsePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AdministratorManagementForm";
+            this.Name = "ManagementForm";
             this.Text = "ManagementForm";
             this.browsePanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.itemHeaderPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.categoryHeaderPanel.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.statusPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -301,10 +305,10 @@
         private System.Windows.Forms.Panel categoryHeaderPanel;
         private System.Windows.Forms.Label categoryLabel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button addCategoryButton;
+        private System.Windows.Forms.Button addSetButton;
         private System.Windows.Forms.Panel itemPanel;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button addItemButton;
+        private System.Windows.Forms.Button addDataButton;
         private System.Windows.Forms.Panel statusPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label managementLabel;

@@ -31,18 +31,19 @@
             this.descriptionLabel = new System.Windows.Forms.Label();
             this.managementLabel = new System.Windows.Forms.Label();
             this.statusPanel = new System.Windows.Forms.Panel();
-            this.bodyPanel = new System.Windows.Forms.Panel();
-            this.cancelButton = new System.Windows.Forms.Button();
-            this.saveButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bodyPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.categoryDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.categoryDescriptionLabel = new System.Windows.Forms.Label();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.idTextBox = new System.Windows.Forms.TextBox();
             this.idLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.saveButton = new System.Windows.Forms.Button();
             this.statusPanel.SuspendLayout();
-            this.bodyPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.bodyPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,45 +80,6 @@
             this.statusPanel.Size = new System.Drawing.Size(700, 83);
             this.statusPanel.TabIndex = 42;
             // 
-            // bodyPanel
-            // 
-            this.bodyPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(89)))), ((int)(((byte)(101)))));
-            this.bodyPanel.Controls.Add(this.panel1);
-            this.bodyPanel.Controls.Add(this.cancelButton);
-            this.bodyPanel.Controls.Add(this.saveButton);
-            this.bodyPanel.Location = new System.Drawing.Point(50, 101);
-            this.bodyPanel.Name = "bodyPanel";
-            this.bodyPanel.Size = new System.Drawing.Size(700, 372);
-            this.bodyPanel.TabIndex = 41;
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(134)))), ((int)(((byte)(44)))));
-            this.cancelButton.FlatAppearance.BorderSize = 0;
-            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelButton.Font = new System.Drawing.Font("Calibri", 13F);
-            this.cancelButton.ForeColor = System.Drawing.Color.White;
-            this.cancelButton.Location = new System.Drawing.Point(90, 310);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(180, 50);
-            this.cancelButton.TabIndex = 13;
-            this.cancelButton.Text = "Discard Changes";
-            this.cancelButton.UseVisualStyleBackColor = false;
-            // 
-            // saveButton
-            // 
-            this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(134)))), ((int)(((byte)(44)))));
-            this.saveButton.FlatAppearance.BorderSize = 0;
-            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Font = new System.Drawing.Font("Calibri", 13F);
-            this.saveButton.ForeColor = System.Drawing.Color.White;
-            this.saveButton.Location = new System.Drawing.Point(430, 310);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(180, 50);
-            this.saveButton.TabIndex = 12;
-            this.saveButton.Text = "Save Changes";
-            this.saveButton.UseVisualStyleBackColor = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::iTEC2014.Properties.Resources.ManagementIcon;
@@ -128,27 +90,76 @@
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
+            // bodyPanel
+            // 
+            this.bodyPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(89)))), ((int)(((byte)(101)))));
+            this.bodyPanel.Controls.Add(this.panel1);
+            this.bodyPanel.Controls.Add(this.saveButton);
+            this.bodyPanel.Location = new System.Drawing.Point(50, 101);
+            this.bodyPanel.Name = "bodyPanel";
+            this.bodyPanel.Size = new System.Drawing.Size(700, 372);
+            this.bodyPanel.TabIndex = 41;
+            // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.usernameTextBox);
+            this.panel1.Controls.Add(this.categoryDescriptionTextBox);
+            this.panel1.Controls.Add(this.categoryDescriptionLabel);
+            this.panel1.Controls.Add(this.nameTextBox);
+            this.panel1.Controls.Add(this.nameLabel);
+            this.panel1.Controls.Add(this.idTextBox);
             this.panel1.Controls.Add(this.idLabel);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(694, 296);
             this.panel1.TabIndex = 14;
             // 
-            // usernameTextBox
+            // categoryDescriptionTextBox
             // 
-            this.usernameTextBox.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(87, 50);
-            this.usernameTextBox.MaxLength = 9;
-            this.usernameTextBox.Multiline = true;
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(520, 25);
-            this.usernameTextBox.TabIndex = 5;
+            this.categoryDescriptionTextBox.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryDescriptionTextBox.Location = new System.Drawing.Point(87, 190);
+            this.categoryDescriptionTextBox.MaxLength = 32;
+            this.categoryDescriptionTextBox.Name = "categoryDescriptionTextBox";
+            this.categoryDescriptionTextBox.Size = new System.Drawing.Size(520, 29);
+            this.categoryDescriptionTextBox.TabIndex = 2;
+            // 
+            // categoryDescriptionLabel
+            // 
+            this.categoryDescriptionLabel.Font = new System.Drawing.Font("Calibri", 13F);
+            this.categoryDescriptionLabel.ForeColor = System.Drawing.Color.White;
+            this.categoryDescriptionLabel.Location = new System.Drawing.Point(87, 163);
+            this.categoryDescriptionLabel.Name = "categoryDescriptionLabel";
+            this.categoryDescriptionLabel.Size = new System.Drawing.Size(520, 22);
+            this.categoryDescriptionLabel.TabIndex = 10;
+            this.categoryDescriptionLabel.Text = "Description";
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTextBox.Location = new System.Drawing.Point(87, 120);
+            this.nameTextBox.MaxLength = 32;
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(520, 29);
+            this.nameTextBox.TabIndex = 1;
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.Font = new System.Drawing.Font("Calibri", 13F);
+            this.nameLabel.ForeColor = System.Drawing.Color.White;
+            this.nameLabel.Location = new System.Drawing.Point(87, 93);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(520, 22);
+            this.nameLabel.TabIndex = 6;
+            this.nameLabel.Text = "Name";
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idTextBox.Location = new System.Drawing.Point(87, 50);
+            this.idTextBox.MaxLength = 9;
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(520, 29);
+            this.idTextBox.TabIndex = 0;
             // 
             // idLabel
             // 
@@ -160,25 +171,20 @@
             this.idLabel.TabIndex = 4;
             this.idLabel.Text = "Unique Identifier";
             // 
-            // label1
+            // saveButton
             // 
-            this.label1.Font = new System.Drawing.Font("Calibri", 13F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(87, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(520, 22);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Unique Identifier";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(87, 120);
-            this.textBox1.MaxLength = 9;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(520, 25);
-            this.textBox1.TabIndex = 7;
+            this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(134)))), ((int)(((byte)(44)))));
+            this.saveButton.FlatAppearance.BorderSize = 0;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Font = new System.Drawing.Font("Calibri", 13F);
+            this.saveButton.ForeColor = System.Drawing.Color.White;
+            this.saveButton.Location = new System.Drawing.Point(260, 310);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(180, 50);
+            this.saveButton.TabIndex = 3;
+            this.saveButton.Text = "Save Changes";
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // CategoryEditForm
             // 
@@ -191,8 +197,8 @@
             this.Name = "CategoryEditForm";
             this.Text = "CategoryEditForm";
             this.statusPanel.ResumeLayout(false);
-            this.bodyPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.bodyPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -206,12 +212,13 @@
         private System.Windows.Forms.Panel statusPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel bodyPanel;
-        private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox usernameTextBox;
+        private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.Label idLabel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.TextBox categoryDescriptionTextBox;
+        private System.Windows.Forms.Label categoryDescriptionLabel;
     }
 }

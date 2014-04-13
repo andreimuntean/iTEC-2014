@@ -27,14 +27,7 @@ namespace iTEC2014
             {
                 // Clear previous view.
                 Body.Controls.Clear();
-
-                for (int i = 0; i < Header.Controls.Count; ++i)
-                {
-                    if (Header.Controls[i] is Button)
-                    {
-                        Header.Controls.RemoveAt(i);
-                    }
-                }
+                MenuPanel.Controls.Clear();
                 CurrentView.Dispose();
             }
 
@@ -48,7 +41,7 @@ namespace iTEC2014
                 // Display menu buttons.
                 (form as IView).MenuItems.ForEach(menuItem =>
                 {
-                    menuItem.Show(Header);
+                    menuItem.Show(MenuPanel);
                 });
             }
 

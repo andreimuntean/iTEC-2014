@@ -45,10 +45,11 @@ namespace iTEC2014
             button.Text = text;
             button.UseVisualStyleBackColor = false;
 
+            button.Click += button_Click;
             button.MouseEnter += button_MouseEnter;
             button.MouseLeave += button_MouseLeave;
 
-            Location = new Point(300 + index * 100, 0);
+            Location = new Point(0 + index * 100, 0);
         }
 
         public void Show(Control parent)
@@ -71,6 +72,10 @@ namespace iTEC2014
         {
             button.BackColor = Theme.Color3;
             button.ForeColor = Theme.Color5;
+        }
+        protected void button_Click(object sender, EventArgs e)
+        {
+            action();
         }
     }
 }

@@ -8,4 +8,12 @@ D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iT
 D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC 2014.exe
 D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC 2014.pdb
 D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.LoginForm.resources
-D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.AdministratorManagementForm.resources
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.CategoryEditForm.resources
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.GroupEditForm.resources
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.ItemEditForm.resources
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.ReportForm.resources
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.UserEditForm.resources
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.UserBrowseForm.resources
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.UserSettingsForm.resources
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.ManagementForm.resources
+D:\Programming\C# Projects\Large-Scale Projects\iTEC 2014\iTEC 2014\obj\Debug\iTEC2014.csproj.ResolveComReference.cache
